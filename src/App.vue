@@ -1,15 +1,11 @@
 <template>
-  <div id="app">
-    <MensagemUsuario />
+  <div id="app" class="container mt-4">
+    <router-view />
   </div>
 </template>
 
 <script>
-import MensagemUsuario from './components/mensagem/MensagemUsuario.vue';
-
 export default {
-  components: {
-    MensagemUsuario
-  }
+  name: 'App'
 }
 </script>

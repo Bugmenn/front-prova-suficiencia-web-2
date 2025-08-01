@@ -4,6 +4,8 @@ cd meu-projeto-vue
 npm run serve
 
 npm install axios
+npm install bootstrap@5 font-awesome
+npm install vue-router
 
 # Criar projeto back
 ETAPA 1: Criar o back-end em ASP.NET Core
