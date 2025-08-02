@@ -15,13 +15,23 @@
       <i class="fa fa-paper-plane"></i> Enviar
     </button>
 
-    <button class="btn btn-success mb-3" @click="abrirTela">Teste</button>
+    <button class="btn btn-success mb-3" @click="abrirTela">Redirecionar</button>
+
+    <button class="btn btn-success mb-3" @click="notificar">Mandar notificação</button>
 
     <div v-if="resposta" class="alert alert-info white-space-pre-line">
       {{ resposta }}
     </div>
   </div>
 </template>
+
+<style lang="css" scoped>
+input {
+  background-color: darkgray !important;
+  color: white !important;
+  border-color: white !important;
+}
+</style>
 
 <script>
 import api from './services/api'
@@ -41,12 +51,15 @@ export default {
         
         this.resposta = `${mensagem.data}\n${objeto.data.nome}\n${objeto.data.data}`
       } catch (erro) {
-        console.error('Erro ao enviar nome:', erro)
+        this.$toast.error('Não foi possivel enviar o nome.')
         this.resposta = 'Erro ao enviar nome.'
       }
     },
     abrirTela() {
       this.$router.push('/hello')
+    },
+    notificar() {
+      this.$toast.success('funcionou')
     },
   }
 }

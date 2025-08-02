@@ -6,6 +6,11 @@ npm run serve
 npm install axios
 npm install bootstrap@5 font-awesome
 npm install vue-router
+npm install vue-toastification@next
+
+## Especificações do projeto
+Criado no visual studio code
+Foi usado a versão 3 do vue
 
 ## Project setup
 ```
