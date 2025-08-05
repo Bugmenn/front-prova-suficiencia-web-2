@@ -1,24 +1,23 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HelloWorld from '../components/HelloWorld.vue'
-import Mensagem from '../components/mensagem/MensagemUsuario.vue'
+import Login from '@/components/Login/LoginUsuario.vue'
+import Cadastro from '@/components/CadastrarUsuario/CadastrarUsuario.vue'
 
 const routes = [
   {
     path: '/',
-    name: 'Mensagem',
-    component: Mensagem
+    name: 'Login',
+    component: Login
   },
   {
-    path: '/hello',
-    name: 'HelloWorld',
-    component: HelloWorld,
-    props: { msg: 'Página HelloWorld!' }
-  }
+    path: '/cadastro',
+    name: 'Cadastro',
+    component: Cadastro
+  },
 ]
 
 const router = createRouter({
   history: createWebHistory(),
-  routes
+  routes,
 })
 
 export default router

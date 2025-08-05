@@ -21,9 +21,9 @@ a {
 } */
 
 input, textarea, select {
-  background-color: #111;
-  color: #fff;
-  border: 1px solid #555;
+  background-color: darkgray !important;
+  color: white !important;
+  border-color: white !important;
 }
 
 .card {
